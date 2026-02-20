@@ -25,9 +25,9 @@ export default function ProductGrid() {
         {!showAll && (
           <button
             onClick={() => setShowAll(true)}
-            className="bg-black text-white px-5 py-2 rounded hover:bg-gray-800 transition"
+            className="bg-[#4A69E2] rounded-[#8px] text-white px-5 py-2 rounded hover:bg-gray-800 transition"
           >
-            Show More
+Shop New Drops
           </button>
         )}
       </div>
