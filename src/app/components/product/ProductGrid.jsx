@@ -18,8 +18,8 @@ export default function ProductGrid() {
 
       {/* 🔥 Header Section */}
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl text-[#232321] font-bold">
-          Don’t miss out new drops
+        <h2 className="text-[74px] text-[#232321] font-bold">
+          Don’t miss out <br /> new drops
         </h2>
 
         {!showAll && (
@@ -27,7 +27,7 @@ export default function ProductGrid() {
             onClick={() => setShowAll(true)}
             className="bg-[#4A69E2] rounded-[#8px] text-white px-5 py-2 rounded hover:bg-gray-800 transition"
           >
-Shop New Drops
+          Shop New Drops
           </button>
         )}
       </div>

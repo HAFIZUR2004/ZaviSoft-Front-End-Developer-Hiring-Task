@@ -9,7 +9,7 @@ export default function CartLayout({ children }) {
       <Navbar />
       {children}
       <ProductSlider />
-      <Footer />
+      <Footer/>
     </>
   );
 }

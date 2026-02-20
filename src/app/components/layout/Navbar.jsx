@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {/* ================= LOGO ================= */}
           <div className="text-2xl font-extrabold tracking-wide md:static absolute left-1/2 transform -translate-x-1/2 md:transform-none">
-            KICKS
+           <img src="navlogo.png" className="w-[128px] h-[32px]" alt="" />
           </div>
 
           {/* ================= RIGHT SIDE ================= */}
