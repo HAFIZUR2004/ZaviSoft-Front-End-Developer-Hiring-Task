@@ -8,7 +8,7 @@ import Hero from "./components/Hero";
 // import ProductCard from "./components/product/ProductCard";
 import ProductGrid from "./components/product/ProductGrid";
 import CategoryItem from "./components/category/CategoryItem";
-import CategoryList from "./components/category/CategoryList";
+// import CategoryList from "./components/category/CategoryList";
 import ReviewSection from "./components/product/ReviewSection";
 
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
       {/* <ProductCard/> */}
       <ProductGrid/>
       <CategoryItem/>
-      <CategoryList/>
+      {/* <CategoryList/> */}
       <ReviewSection/>
       <Footer/>
       {/* <ProductSection products={products} /> */}

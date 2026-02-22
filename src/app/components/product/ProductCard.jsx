@@ -50,13 +50,13 @@ export default function ProductCard({ id, title, image, price }) {
         </div>
 
         {/* Title */}
-        <h3 className="font-semibold text-sm leading-snug text-black">
+        <h3 className="font-semibold text-sm leading-snug text-black line-clamp-2 min-h-[60px]">
           {title}
-        </h3>
+      </h3>
 
         {/* Button */}
         <button className="w-full bg-black text-white py-2 rounded-md text-sm">
-          VIEW PRODUCT - ${price}
+          VIEW PRODUCT - <span className="text-[#FFA52F]">${price}</span> 
         </button>
 
       </div>

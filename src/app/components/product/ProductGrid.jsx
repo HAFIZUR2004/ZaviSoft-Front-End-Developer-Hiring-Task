@@ -17,9 +17,9 @@ export default function ProductGrid() {
     <div className="container mx-auto px-6 py-12">
 
       {/* 🔥 Header Section */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-end mb-8">
         <h2 className="text-[74px] text-[#232321] font-bold">
-          Don’t miss out <br /> new drops
+         DON'T MISS OUT <br /> NEW DROPS
         </h2>
 
         {!showAll && (
