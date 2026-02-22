@@ -44,7 +44,7 @@ export default function ProductSlider() {
 
   return (
     <section className="bg-[#ececec] py-16">
-      <div className="max-w-[1320px] mx-auto px-6">
+      <div className="w-full mx-auto md:px-0 px-4">
         
         {/* Header */}
         <div className="flex justify-between items-center mb-10">

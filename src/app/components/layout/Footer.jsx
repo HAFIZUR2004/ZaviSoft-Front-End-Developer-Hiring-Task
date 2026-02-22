@@ -1,18 +1,20 @@
-import { Facebook, Instagram, Plus, Twitter } from "lucide-react";
+import { Facebook, Instagram, Plus, TicketCheckIcon, Twitter } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+
 
 export default function Footer() {
   return (
     <footer className="mt-20 max-w-[1320px] mx-auto px-4">
       
       {/* 1. Top Blue Section: Newsletter */}
-      <div className="bg-[#4a69ff] rounded-t-[32px] px-8 md:px-16 py-16 -mb-11 text-white flex flex-col md:flex-row justify-between items-center gap-10">
+      <div className="bg-[#4a69ff] rounded-t-[32px] px-8 md:px-16 py-16 -mb-11 text-white flex flex-col md:flex-row justify-between md:items-center gap-10">
         
         {/* Left Side Text */}
         <div className="max-w-xl">
-          <h2 className="text-4xl md:text-5xl font-black leading-tight uppercase tracking-tighter">
+          <h2 className=" md:text-[48px] text-[32px]  md:font-semibold leading-tight uppercase tracking-tighter">
             JOIN OUR KICKSPLUS <br /> CLUB & GET 15% OFF
           </h2>
-          <p className="mt-4 text-[15px] font-semibold text-blue-100 uppercase tracking-wide">
+          <p className="mt-4 text-[20px] font-semibold text-[#E7E7E3] uppercase tracking-wide">
             Sign up for free! Join the community.
           </p>
           
@@ -30,11 +32,11 @@ export default function Footer() {
         </div>
 
         {/* Right Side: Small K+ Logo */}
-        <div className="hidden md:block">
+        <div className="">
            <div className="relative">
-              <img src="/footerlogo.png" alt="Logo" className="w-[351px] h-[88px]" /> 
+              <img src="/footerlogo.png" alt="Logo" className=" md:w-[351px] w-[191px] h-[48px] md:h-[88px]" /> 
               {/* উপরে ছোট হলুদ ডট টা ইমেজে লোগোর সাথেই থাকার কথা, নাহলে নিচের div টি ব্যবহার করুন */}
-              <div className="absolute -top-1 -right-4 bg-yellow-400 w-6 h-6 rounded-full border-2 border-[#4a69ff] flex items-center justify-center">
+              <div className="absolute md:-top-5 -top-4 right-34 md:-right-1 bg-yellow-400 w-6 h-6 rounded-full border-2 border-[#4a69ff] flex items-center justify-center">
   <Plus size={14} className="text-[#4a69ff] stroke-[4px]" />
       </div>
            </div>
@@ -92,8 +94,10 @@ export default function Footer() {
               <Facebook className="text-white hover:text-yellow-400 cursor-pointer transition" size={20} />
               <Instagram className="text-white hover:text-yellow-400 cursor-pointer transition" size={20} />
               <Twitter className="text-white hover:text-yellow-400 cursor-pointer transition" size={20} />
-              {/* ইমেজে একটি টিকটক আইকনও দেখা যাচ্ছে */}
-              <span className="font-bold hover:text-yellow-400 cursor-pointer transition">𝅘𝅥𝅮</span> 
+              <FaTiktok className="text-white  hover:text-yellow-400 cursor-pointer transition" size={20}  />
+
+
+              
             </div>
           </div>
         </div>

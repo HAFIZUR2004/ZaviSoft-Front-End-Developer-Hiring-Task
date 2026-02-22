@@ -1,43 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { Heart } from "lucide-react";
-
+import Loader from "../ui/Loader";
 export default function ProductDetails({ product }) {
   const router = useRouter();
   const { addToCart } = useCart();
 
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedImage, setSelectedImage] = useState(product.images?.[0]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const sizes = [38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
+
+ useEffect(() => {
+    // যখন প্রোডাক্ট ডেটা চলে আসবে, তখন লোডিং বন্ধ হবে
+    if (product) {
+      // একটি ছোট ডিলে দেওয়া হয়েছে যাতে স্মুথ ট্রানজিশন হয়
+      const timer = setTimeout(() => setIsLoading(false), 800);
+      return () => clearTimeout(timer);
+    }
+  }, [product]);
 
   const handleAddToCart = () => {
     if (!selectedSize) {
       alert("Please select a size first!");
       return;
     }
-    
-    // কার্টে প্রোডাক্ট যোগ করা হচ্ছে
     addToCart({ ...product, selectedSize });
-    
-    // আইটেম যোগ হওয়ার পর সরাসরি কার্ট পেজে নিয়ে যাবে
     router.push("/cart"); 
   };
+
   const handleBuyNow = () => {
     if (!selectedSize) {
       alert("Please select a size first!");
       return;
     }
     addToCart({ ...product, selectedSize });
-    router.push("/cart"); // Buy Now ও সরাসরি কার্ট বা চেকআউট পেজে নিয়ে যাবে
+    router.push("/cart");
   };
+
+  // লোডিং কন্ডিশন
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#e9e9e1]">
+        <Loader /> 
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#e9e9e1] min-h-screen py-6 md:py-12">
-      <div className="max-w-[1320px] mx-auto px-4 md:px-10">
+      <div className="w-full mx-auto md:px-0 px-4 ">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
           
           {/* ================= LEFT SIDE: IMAGE GRID ================= */}

@@ -21,8 +21,8 @@ export default function ReviewSection() {
   ];
 
   return (
-    <section className="bg-[#E7E7E3] py-16">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-[#E7E7E3] md:px-4 py-16">
+      <div className="w-full mx-auto md:px-0 px-4">
 
         {/* Header */}
         <div className="flex items-center justify-between mb-10">

@@ -3,7 +3,7 @@
 export default function Hero() {
   return (
     <section className="relative">
-      <div className="container mx-auto px-4">
+      <div className="w-full mx-auto px-4">
 
         {/* Big Heading */}
         <h1 className="text-5xl md:text-[100px] font-extrabold text-center text-black mt-10">

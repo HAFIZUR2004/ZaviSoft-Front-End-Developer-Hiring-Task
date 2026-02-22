@@ -60,12 +60,12 @@ export default function CategoryList() {
   };
 // flex
   return (
-    <section className="bg-[#1a1a1a] pt-0  pl-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#1a1a1a] pt-0 w-full   overflow-hidden">
+      <div className=" md:w-full pl-8  ">
         
         {/* Header Section */}
         <div className="flex justify-between items-center py-6 mb-2"> 
-          <h2 className="text-white text-[24px] md:text[76px] font-semibold  tracking-tight uppercase leading-none">
+          <h2 className="text-white text-[24px] md:text[76px] pl-5 font-semibold  tracking-tight uppercase leading-none">
             CATEGORIES
           </h2>
           
