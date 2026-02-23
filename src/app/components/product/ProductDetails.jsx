@@ -75,6 +75,7 @@ export default function ProductDetails({ product }) {
               ))}
             </div>
 
+            {/* Mobile: Corner rounding 16px and Indicators on top of big image */}
             <div className="lg:hidden space-y-4">
               {/* Main Image with 16px border radius on all sides */}
               <div className="relative overflow-hidden aspect-square flex items-center justify-center rounded-[16px]">
@@ -96,12 +97,12 @@ export default function ProductDetails({ product }) {
               </div>
 
               {/* Thumbnail row with 6px gap and 12px rounding */}
-              <div className="flex gap-[6px] overflow-x-auto no-scrollbar py-2">
+              <div className="flex gap-[6px] overflow-x-auto no-scrollbar px-2 md:px-0 py-2">
                 {product.images?.map((img, index) => (
                   <div 
                     key={index}
                     onClick={() => setSelectedImage(img)}
-                    className={`min-w-[80px] h-[80px] cursor-pointer transition-all overflow-hidden rounded-[12px]
+                    className={`min-w-[80px] h-[80px] cursor-pointer transition-all  overflow-hidden rounded-[12px]
                       ${selectedImage === img ? "ring-2 ring-black ring-offset-2" : "opacity-70"}`}
                   >
                     <img src={img} className="w-full h-full object-cover" />

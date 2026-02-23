@@ -16,8 +16,8 @@ export default function CartPage() {
   } = useCart();
 
   return (
-    <div className="bg-[#e9e9e1] w-full mx-auto min-h-screen py-10 md:py-16">
-      <div className="w-full mx-auto px-4 md:px-6">
+    <div className="w-full py-6 md:py-10">
+      <div className="w-full ">
         
         {/* Top Sale Banner Style */}
         <motion.div 
@@ -34,11 +34,9 @@ export default function CartPage() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-start">
-          
+<div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-start justify-center">          
           {/* LEFT SIDE: YOUR BAG */}
-          <div className="bg-white rounded-[24px] p-6 md:p-10 shadow-sm">
-            <h1 className="text-[24px] md:text-[32px] font-bold text-[#232321] mb-8 uppercase tracking-tight">Your Bag</h1>
+<div className="bg-white rounded-[24px] p-6 md:p-10 shadow-sm w-full  ">            <h1 className="text-[24px] md:text-[32px] font-bold text-[#232321] mb-8 uppercase tracking-tight">Your Bag</h1>
 
             {cartItems.length === 0 ? (
               <motion.div 

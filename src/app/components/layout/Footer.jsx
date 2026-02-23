@@ -20,22 +20,50 @@ export default function Footer() {
           
           {/* Email Input Field */}
           <div className="mt-8 flex gap-2 w-full max-w-md">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="flex-1 px-4 py-3 rounded-xl bg-transparent border border-white/50 text-white placeholder-white/70 focus:outline-none focus:border-white transition"
-            />
-            <button className="bg-[#232321] px-8 py-3 rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-black transition">
-              SUBMIT
-            </button>
-          </div>
+  <input
+    type="email"
+    placeholder="Email address"
+    className="
+      flex-1 
+      min-w-0
+      px-3 sm:px-4 
+      py-3 
+      rounded-xl 
+      bg-transparent 
+      border border-white/50 
+      text-white 
+      placeholder-white/70 
+      focus:outline-none 
+      focus:border-white 
+      transition
+    "
+  />
+
+  <button
+    className="
+      shrink-0
+      px-4 sm:px-8
+      py-3 
+      rounded-xl 
+      text-xs sm:text-sm
+      font-bold 
+      uppercase 
+      tracking-widest 
+      bg-[#232321] 
+      hover:bg-black 
+      transition
+    "
+  >
+    SUBMIT
+  </button>
+</div>
         </div>
 
         {/* Right Side: Small K+ Logo */}
         <div className="">
            <div className="relative">
               <img src="/footerlogo.png" alt="Logo" className=" md:w-[351px] w-[191px] h-[48px] md:h-[88px]" /> 
-              <div className="absolute md:-top-5 -top-4 right-34 md:-right-1 bg-yellow-400 w-6 h-6 rounded-full border-2 border-[#4a69ff] flex items-center justify-center">
+              <div className="absolute md:-top-5 -top-5 right-29 md:-right-1 bg-yellow-400 w-6 h-6 rounded-full border-2 border-[#4a69ff] flex items-center justify-center">
   <Plus size={14} className="text-[#4a69ff] stroke-[4px]" />
       </div>
            </div>
