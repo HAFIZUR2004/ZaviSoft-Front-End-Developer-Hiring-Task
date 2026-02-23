@@ -69,7 +69,7 @@ export default function Footer() {
            </div>
         </div>
       </div>
-
+{/* mnm */}
       {/* 2. Bottom Dark Section */}
       <div className="bg-[#232321] text-white mt-[-32px] pt-32 pb-6 px-8 md:px-16 rounded-[48px] relative overflow-hidden">
         
