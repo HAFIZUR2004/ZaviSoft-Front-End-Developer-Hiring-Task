@@ -35,7 +35,6 @@ export default function Footer() {
         <div className="">
            <div className="relative">
               <img src="/footerlogo.png" alt="Logo" className=" md:w-[351px] w-[191px] h-[48px] md:h-[88px]" /> 
-              {/* উপরে ছোট হলুদ ডট টা ইমেজে লোগোর সাথেই থাকার কথা, নাহলে নিচের div টি ব্যবহার করুন */}
               <div className="absolute md:-top-5 -top-4 right-34 md:-right-1 bg-yellow-400 w-6 h-6 rounded-full border-2 border-[#4a69ff] flex items-center justify-center">
   <Plus size={14} className="text-[#4a69ff] stroke-[4px]" />
       </div>
@@ -85,7 +84,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Links (ইমেজের মতো ডান পাশে) */}
+          {/* Social Links*/}
           <div className="flex flex-col items-start md:items-end">
             <h3 className="text-yellow-400 font-extrabold text-xl uppercase tracking-tighter mb-6">
               Follow us
@@ -102,7 +101,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* 3. Huge KICKS Logo (একদম নিচ থেকে লেগে থাকবে) */}
+        {/* 3. Huge KICKS Logo */}
         <div className="mt-10 mr-[40px] flex justify-center w-full">
           <img
             src="/foot.png" 

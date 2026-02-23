@@ -16,9 +16,7 @@ export default function ProductDetails({ product }) {
   const sizes = [38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
 
  useEffect(() => {
-    // যখন প্রোডাক্ট ডেটা চলে আসবে, তখন লোডিং বন্ধ হবে
     if (product) {
-      // একটি ছোট ডিলে দেওয়া হয়েছে যাতে স্মুথ ট্রানজিশন হয়
       const timer = setTimeout(() => setIsLoading(false), 800);
       return () => clearTimeout(timer);
     }
@@ -42,7 +40,6 @@ export default function ProductDetails({ product }) {
     router.push("/cart");
   };
 
-  // লোডিং কন্ডিশন
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#e9e9e1]">
@@ -59,7 +56,6 @@ export default function ProductDetails({ product }) {
           {/* ================= LEFT SIDE: IMAGE GRID ================= */}
           <div className="space-y-4">
             
-            {/* Desktop: Grid Layout with 6px gap and specific corner rounding */}
             <div className="hidden lg:grid grid-cols-2 gap-[6px]">
               {product.images?.slice(0, 4).map((img, idx) => (
                 <div 
@@ -79,7 +75,6 @@ export default function ProductDetails({ product }) {
               ))}
             </div>
 
-            {/* Mobile: Corner rounding 16px and Indicators on top of big image */}
             <div className="lg:hidden space-y-4">
               {/* Main Image with 16px border radius on all sides */}
               <div className="relative overflow-hidden aspect-square flex items-center justify-center rounded-[16px]">

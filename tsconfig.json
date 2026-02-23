@@ -28,6 +28,6 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/product/error.jsx"  ],
   "exclude": ["node_modules"]
 }

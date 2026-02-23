@@ -5,6 +5,7 @@ A high-fidelity, responsive e-commerce frontend built with Next.js, translating 
 🛠️ Tech Stack
 Framework: Next.js 14+ (App Router)
 
+<<<<<<< HEAD
 Styling: Tailwind CSS
 
 Animations: Framer Motion (for smooth transitions)
@@ -60,6 +61,12 @@ npm install
 Run the Development Server:
 
 Bash
+=======
+First, run the development server:
+amarrrrrrrrrrrrrrrrrrrrrrrrrrr
+lksdlkfjsdlkdjflksd
+```bash
+>>>>>>> 9820ea5 (Add netlify config)
 npm run dev
 Open http://localhost:3000 in your browser.
 

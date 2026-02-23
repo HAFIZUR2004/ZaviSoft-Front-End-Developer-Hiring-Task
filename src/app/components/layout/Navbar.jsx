@@ -23,21 +23,21 @@ export default function Navbar() {
 
           {/* ================= DESKTOP LEFT ================= */}
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
-  
-  <a href="#" className="flex items-center gap-1 hover:text-black transition">
-    New Drops 
-    <Flame size={16} className="text-orange-500" />
-  </a>
 
-  <a href="#" className="hover:text-black transition">
-    Men
-  </a>
+            <a href="#" className="flex items-center gap-1 hover:text-black transition">
+              New Drops
+              <Flame size={16} className="text-orange-500" />
+            </a>
 
-  <a href="#" className="hover:text-black transition">
-    Women
-  </a>
+            <a href="#" className="hover:text-black transition">
+              Men
+            </a>
 
-</div>
+            <a href="#" className="hover:text-black transition">
+              Women
+            </a>
+
+          </div>
 
           {/* ================= MOBILE LEFT (Dropdown Button) ================= */}
           <button
@@ -49,17 +49,17 @@ export default function Navbar() {
 
           {/* ================= LOGO ================= */}
           <div className="text-2xl font-extrabold tracking-wide md:static absolute left-1/2 transform -translate-x-1/2 md:transform-none">
-  <Link href="/">
-    <Image
-      src="/navlogo.png"
-      alt="Logo"
-      width={128}
-      height={36}
-      className="cursor-pointer"
-      priority
-    />
-  </Link>
-</div>
+            <Link href="/">
+              <Image
+                src="/navlogo.png"
+                alt="Logo"
+                width={128}
+                height={36}
+                className="cursor-pointer"
+                priority
+              />
+            </Link>
+          </div>
 
           {/* ================= RIGHT SIDE ================= */}
           <div className="flex text-[#232321] items-center gap-4">
@@ -72,12 +72,13 @@ export default function Navbar() {
 
             {/* Cart */}
             <div className="relative cursor-pointer">
-              <ShoppingCart className="w-5 h-5" />
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                  {totalItems}
-                </span>
-              )}
+              {/* Shopping Cart Icon bad diye amra ekhane shudhu circle-ti rakhchi */}
+              <div
+                className="w-7 h-7 flex items-center justify-center rounded-full text-[#232321] "
+                style={{ backgroundColor: '#FFA52F' }}
+              >
+                {totalItems || 0}
+              </div>
             </div>
 
           </div>

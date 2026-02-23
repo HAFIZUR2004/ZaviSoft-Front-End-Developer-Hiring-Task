@@ -10,7 +10,6 @@ export default function CartLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // কার্ট লেআউটের কন্টেন্ট লোড হওয়ার জন্য ছোট একটি ডিলে
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 800);
@@ -18,7 +17,6 @@ export default function CartLayout({ children }) {
     return () => clearTimeout(timer);
   }, []);
 
-  // লোডিং অবস্থায় শুধু Loader দেখাবে
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#e9e9e1]">
@@ -31,9 +29,11 @@ export default function CartLayout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
+
+      <main className="flex-grow max-w-[1320px] mx-auto">
         {children}
       </main>
+
       <ProductSlider />
       <Footer />
     </div>
