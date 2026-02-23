@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+👟 Kicks - Modern E-commerce Storefront
+A high-fidelity, responsive e-commerce frontend built with Next.js, translating Figma designs into a functional shopping experience. This project integrates the Platzi Fake Store API for real-time product data and features a local cart system.
 
-## Getting Started
+🚀 Live Demo Link | Source Code
+🛠️ Tech Stack
+Framework: Next.js 14+ (App Router)
 
-First, run the development server:
+Styling: Tailwind CSS
 
-```bash
+Animations: Framer Motion (for smooth transitions)
+
+State Management: Context API (Cart & Product state)
+
+Data Fetching: Axios
+
+Icons: Lucide React
+
+API: Platzi Fake Store API
+
+✨ Key Features
+Product Listing: Dynamic fetching of products and categories from API.
+
+Detailed View: Individual product pages with dynamic routing (/product/[id]).
+
+Shopping Cart (Bonus): Fully functional local cart management (Add/Remove/Update).
+
+UI/UX States: Custom Loading, Empty, and Error states for a better user experience.
+
+Responsive Design: Optimized for Desktop, Tablet, and Mobile devices.
+
+Smooth Animations: Reveal animations and hover effects using Framer Motion.
+
+📂 Folder Structure Overview
+My architecture follows a Modular Component-Based approach:
+
+app/: Routing and layout logic.
+
+components/: Segregated into layout, product, category, and ui for high reusability.
+
+context/: Centralized state management for Cart and Products.
+
+hooks/: Custom hooks for clean data fetching logic.
+
+services/: Axios base configuration and API endpoint abstraction.
+
+types/: TypeScript definitions for data integrity.
+
+⚙️ Local Setup
+Follow these steps to run the project locally:
+
+Clone the Repository:
+
+Bash
+git clone <YOUR_REPO_URL>
+cd kicks-store
+Install Dependencies:
+
+Bash
+npm install
+Run the Development Server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📝 Implementation Notes
+UI Fidelity: Every pixel, spacing, and typography choice was made to match the Figma blueprint as closely as possible.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Clean Code: Followed DRY (Don't Repeat Yourself) principles, especially in the UI components like Buttons and Cards.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Commits: Maintained a meaningful commit history (e.g., feat:, fix:, refactor:) to show the development progress.
 
-## Learn More
+State Logic: Used Context API for the Cart to ensure state persistence across different pages without page reloads.
 
-To learn more about Next.js, take a look at the following resources:
+👤 Author
+Hafizur Rahman
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub: @HAFIZUR2004
+Live URL:
