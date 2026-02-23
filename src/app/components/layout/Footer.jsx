@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 {/* mnm */}
       {/* 2. Bottom Dark Section */}
-      <div className="bg-[#232321] text-white mt-[-32px] pt-32 pb-6 px-8 md:px-16 rounded-[48px] relative overflow-hidden">
+      <div className="bg-[#232321] text-white margin-top: -32px pt-32 pb-6 px-8 md:px-16 rounded-[48px] relative overflow-hidden">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
           

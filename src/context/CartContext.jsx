@@ -1,19 +1,31 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
+  // Persist cart to localStorage
+  useEffect(() => {
+    const stored = localStorage.getItem("cart");
+    if (stored) setCartItems(JSON.parse(stored));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const addToCart = (product) => {
-    const existing = cartItems.find((item) => item.id === product.id);
+    const existing = cartItems.find(
+      (item) => item.id === product.id && item.selectedSize === product.selectedSize
+    );
 
     if (existing) {
       setCartItems(
         cartItems.map((item) =>
-          item.id === product.id
+          item.id === product.id && item.selectedSize === product.selectedSize
             ? { ...item, quantity: item.quantity + 1 }
             : item
         )
@@ -23,16 +35,22 @@ export function CartProvider({ children }) {
     }
   };
 
-  const updateQuantity = (id, quantity) => {
+  const updateQuantity = (id, selectedSize, quantity) => {
     setCartItems(
       cartItems.map((item) =>
-        item.id === id ? { ...item, quantity } : item
+        item.id === id && item.selectedSize === selectedSize
+          ? { ...item, quantity }
+          : item
       )
     );
   };
 
-  const removeItem = (id) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
+  const removeItem = (id, selectedSize) => {
+    setCartItems(
+      cartItems.filter(
+        (item) => !(item.id === id && item.selectedSize === selectedSize)
+      )
+    );
   };
 
   const subtotal = cartItems.reduce(
@@ -40,8 +58,8 @@ export function CartProvider({ children }) {
     0
   );
 
-  const delivery = 6.99;
-  const total = subtotal + (subtotal > 0 ? delivery : 0);
+  const delivery = subtotal > 0 ? 6.99 : 0;
+  const total = subtotal + delivery;
 
   return (
     <CartContext.Provider

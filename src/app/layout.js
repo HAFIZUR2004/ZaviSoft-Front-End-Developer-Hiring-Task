@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "My Website",
-  description: "Next.js + Tailwind + Rubik Font",
+  title: "kicks",
+  description: "Kicks is a modern sneaker eCommerce website",
 };
 
 export default function RootLayout({ children }) {
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <CartProvider>
           {/* ClientWrapper ব্যবহার করা হয়েছে যাতে Metadata নষ্ট না হয় */}
           <ClientWrapper rubikClass={rubik.className}>
-            <div className="max-w-[1320px] mx-auto">
+            <div className="max-width-[1320px] mx-auto">
               {children}
             </div>
           </ClientWrapper>

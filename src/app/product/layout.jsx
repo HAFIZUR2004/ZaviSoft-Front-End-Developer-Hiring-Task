@@ -6,6 +6,7 @@ import Navbar from "../components/layout/Navbar";
 import ProductSlider from "../components/product/ProductSlider";
 import { Rubik } from "next/font/google";
 import Loader from "../components/ui/Loader";
+import { Toaster } from "react-hot-toast";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function ProductLayout({ children }) {
       <Navbar />
       <div className="max-w-[1320px] md:px-6 mx-auto">
         {children}
+         <Toaster position="top-right" reverseOrder={false} />
         <ProductSlider />
       </div>
       <Footer />

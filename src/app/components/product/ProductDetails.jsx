@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { Heart } from "lucide-react";
 import Loader from "../ui/Loader";
+import toast from "react-hot-toast";
 export default function ProductDetails({ product }) {
   const router = useRouter();
   const { addToCart } = useCart();
@@ -23,20 +24,21 @@ export default function ProductDetails({ product }) {
   }, [product]);
 
   const handleAddToCart = () => {
-    if (!selectedSize) {
-      alert("Please select a size first!");
-      return;
-    }
+   if (!selectedSize) {
+  toast.error("Please select a size first!");
+  return;
+}
     addToCart({ ...product, selectedSize });
     router.push("/cart"); 
   };
 
   const handleBuyNow = () => {
     if (!selectedSize) {
-      alert("Please select a size first!");
+     toast.error("Please select a size first!");
       return;
     }
     addToCart({ ...product, selectedSize });
+    toast.success("Added to cart successfully!");
     router.push("/cart");
   };
 

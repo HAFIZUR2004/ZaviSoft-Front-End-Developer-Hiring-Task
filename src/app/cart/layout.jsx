@@ -26,18 +26,20 @@ export default function CartLayout({ children }) {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#e9e9e1]">
-      <main className="flex-grow">
       <Navbar />
-
-      
-  <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
-    {children}
-  </div>
+      <main className="flex-grow">
 
 
-      <ProductSlider />
-      <Footer />
+
+        <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8">
+          {children}
+        </div>
+
+
+        <ProductSlider />
+
       </main>
+      <Footer />
     </div>
   );
 }
